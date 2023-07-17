@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Selectors</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        
+      }
+      .navigation {
+        display: flex;
+        font-size: 20px;
+      }
+      li {
+        list-style: none;
+        padding: 34px 23px;
+      }
+      section {
+        height: 350px;
+        /* border: 2px solid red; */
+        margin: 3px 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        text-align: center;
+      }
+      section::before {
+        content: "This is a content";
+      }
+      header::before{
+        background: url('https://images.unsplash.com/photo-1560707303-4e980ce876ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80') no-repeat center center/cover;
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navigation">
+          <li class="item">Home</li>
+          <li class="item">About</li>
+          <li class="item">Services</li>
+          <li class="item">Contact Us</li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h1>Welcome To Coding World</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam culpa
+        nostrum quod, totam hic molestias harum nam! Cum nemo ab consequatur
+        ipsam! Incidunt fugit reprehenderit, vero sed consequatur, non
+        accusantium aspernatur officia numquam provident nihil tempora porro
+        esse blanditiis ipsam alias voluptatibus expedita. Odio laboriosam,
+        eligendi repudiandae itaque debitis reiciendis!
+      </p>
+    </section>
+    <hr>
+  </body>
+</html>

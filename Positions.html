@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Tutorial</title>
+    <style>
+      .container {
+        border: 2px solid black;
+        background-color: aqua;
+        height: 3000px;
+      }
+      .box {
+        display: inline-block;
+        border: 2px solid red;
+        width: 150px;
+        height: 150px;
+        margin: 5px;
+      }
+      #box3 {
+        /* 
+        
+        ->Relative ke case mein context relative to it's normal position ki baat hoti hai. 
+        Isse Puraani position mein gap aa jati
+        hai
+        ->Is positioned relative to its normal position.
+        ->Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its  normal position. Other content will not be adjusted to fit into any gap left by the element.
+        */
+        /* 
+        ->An element with position: absolute; is positioned relative to the nearest positioned ancestor.
+        position: relative;
+        top: 34px;
+        left: 35px; 
+        */
+
+        /* position: absolute;
+        top: 34px;
+        left: 35px; */
+        /* 
+        Position absolute ka mtlb hota hai , relative to it's first parent ki baat ho rhi hai.
+        */
+        /* box 3 and 4 overlap kr jayenge */
+
+        /* position: fixed;
+        right: 41px; */
+        /*
+        ->An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+
+        ->A fixed element does not leave a gap in the page where it would normally have been located.
+        */
+        /* An element with position: sticky; is positioned based on the user's scroll position. */
+        /*  */
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+There are five different position values:
+static (default)
+relative
+fixed
+absolute
+sticky 
+-->
+    <div class="container">
+      <div class="box" id="box1">box1</div>
+      <div class="box" id="box2">box2</div>
+      <div class="box" id="box3">box3</div>
+      <div class="box" id="box4">box4</div>
+    </div>
+  </body>
+</html>
