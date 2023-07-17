@@ -1,0 +1,71 @@
+<!-- The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning. -->
+<!-- Here Container is Flex Container and Item is flex items -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox</title>
+    <style>
+      .container {
+        height: 540px;
+        width: 100%;
+        border: 2px solid black;
+        display: flex;
+
+        /* Flex Properties for Flex Container */
+        /* Default value of flex direction is row. */
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: row;
+            flex-wrap: wrap; */
+        /* This property is very helpful for making responsive designs. */
+        /* 
+        Short-hand for flex-direction and flex-wrap
+        */
+        flex-flow: row wrap;
+        /* Justify Content will be used to justify the content in the horizontal direction*/
+        justify-content: center;
+        /* justify-content: space-between; */
+        /* justify-content: space-evenly; */
+        /* justify-content: space-around; */
+        align-items: center;
+        /* 
+        Align items will be used to align the items in the vertical direction
+        */
+        /* This will vertically center the flex items */
+        /* align-items: flex-end; */
+
+        /* Flex Properties for flex Items */
+      }
+      #item-1{
+        /* order: 2; */
+        /* Higher the order , Later it will be shown  */
+        flex-grow: 5;
+        /* 
+        The item will grow in higher proportion , compared to others
+        */
+        flex-shrink: 3;
+      }
+      .item {
+        width: 150px;
+        height: 150px;
+        background-color: yellowgreen;
+        border: 2px solid black;
+        margin: 10px;
+        padding: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>We are Studying about Flex</h1>
+    <div class="container">
+      <div class="item" id="item-1">First Box</div>
+      <div class="item" id="item-2">Second Box</div>
+      <div class="item" id="item-3">Third Box</div>
+      <div class="item" id="item-4">Fourth Box</div>
+      <div class="item" id="item-5">Fifth Box</div>
+      <div class="item" id="item-6">Sixth Box</div>
+    </div>
+  </body>
+</html>
