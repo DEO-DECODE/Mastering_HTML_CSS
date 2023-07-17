@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition Transformation and Animation</title>
+    <style>
+      .box {
+        background-color: rgb(45, 45, 45);
+        height: 100px;
+        width: 100px;
+        font: bold 2rem cursive;
+        color: white;
+        margin: 2rem;
+        transition-property: background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        transition-timing-function: ease-out;
+        transition-timing-function: ease-in-out;
+        transition-delay: 2s;
+        /* Short hand For setting all */
+        transition: background-color 1s ease-in-out 1s, color 1s ease-out 1s;
+        /* In order to avoid writing transition property specifically , we simply write all */
+        transition: all 2s;
+      }
+      .box:hover {
+        background-color: aqua;
+        color: blueviolet;
+        /* width: 15%; */
+        box-shadow: 10px 10px 20px black;
+        transform: skew(-10deg);
+        transform: skewX(-10deg);
+        transform: skewY(-10deg);
+        /* 
+            Short Hand for giving transition properties to both x and y directions
+            */
+        transform: skew(5deg, 5deg);
+        /* Now if we, want to translate */
+        transform: translate(20px, 20px);
+        /* Now, if we want to add Scale property then , we can do this as well!!!!! */
+        transform: scale(1.2, 1.2);
+        /* Now if we want to rotate the box taking x axis and y axis as base */
+        transform: rotate(90deg);
+        transform: rotateX(30deg);
+        transform: rotateY(30deg);
+        transform: rotateZ(30deg);
+        /* 
+            We can give all properties together as well !! 
+            */
+        /* transform: scale(1.5) translate(50% 50%); */
+
+        /* Now We need to learn animations */
+      }
+      #box1{
+        animation-name: myAnimation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        /* animation-fill-mode: forwards; */
+        /* animation-fill-mode: infinite; */
+        animation-iteration-count: infinite;
+        /* Short Hand Property */
+        animation: myAnimation 10s linear 1s infinite alternate;
+      }
+      @keyframes myAnimation {
+        /* from{
+            background-color: red;
+        }
+        to{
+            background-color: springgreen;
+        } */
+        0%{
+            background-color: rgb(255, 145, 0);
+            transform: scale(2);
+        }
+        50%{
+            border-radius: 100%;
+        }
+        100%{
+            background-color: rgb(11, 8, 8);
+            transform: scale(20);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+  </body>
+</html>
