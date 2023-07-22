@@ -21,14 +21,14 @@
         /* Short hand For setting all */
         /* transition: background-color 1s ease-in-out 1s, color 1s ease-out 1s; */
         /* In order to avoid writing transition property specifically , we simply write all */
-        transition: all 1s;
+        transition: all 1s ease-in-out 0.5s;
       }
       .box:hover {
         background-color: aqua;
         color: blueviolet;
         width: 15%;
         box-shadow: 10px 10px 20px black;
-        /* transform: skew(-10deg); */
+        /* transform: skew(-5deg); */
         /* transform: skewX(-10deg); */
         /* transform: skewY(-10deg); */
         /*
@@ -47,7 +47,7 @@
         /*
             We can give all properties together as well !!
             */
-        /* transform: translate(10px) scale(1.2) skewX(-10deg) rotateX(30deg); */
+        transform: scale(1.2, 1.2) skewX(-5deg) translate(60px) rotateX(30deg);
 
         /* Now We need to learn animations */
       }
@@ -58,7 +58,7 @@
         animation-fill-mode: forwards;
         animation-iteration-count: infinite;
         /* Short Hand Property */
-        animation: myAnimation 10s linear 1s infinite alternate;
+        animation: myAnimation 5s linear 1s infinite alternate;
       }
       @keyframes myAnimation {
         /* from{
@@ -69,7 +69,7 @@
         } */
         0% {
           background-color: rgb(255, 145, 0);
-          transform: scale(2);
+          transform: scale(1.5);
           z-index: -1;
         }
         50% {
@@ -78,7 +78,7 @@
         }
         100% {
           background-color: rgb(48, 215, 22);
-          transform: scale(5);
+          transform: scale(3);
           z-index: -1;
         }
       }
