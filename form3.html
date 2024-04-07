@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="formStyle.css" />
+  </head>
+  <body>
+    <div className="hero">
+      <form action>
+        <div className="row">
+          <div className="input-group">
+            <input type="text" id="name" required />
+            <label htmlFor="name">
+              <i className="fas fa-user" />Your Name</label
+            >
+          </div>
+          <div className="input-group">
+            <input type="text" id="number" required />
+            <label htmlFor="number">
+              <i className="fas fa-phone-square-alt" /> Phone Number</label
+            >
+          </div>
+        </div>
+        <div className="input-group">
+          <input type="email" id="email" required />
+          <label htmlFor="email">
+            <i className="fas fa-envalope" />Email Id</label
+          >
+        </div>
+        <div className="input-group">
+          <textarea id="message" rows={8} required defaultValue={""} />
+          <label htmlFor="message"
+            ><i className="fas fa-comments" />Your Message</label
+          >
+        </div>
+        <button type="submit">
+          <i className="fas fa-paper-plane" /> Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
