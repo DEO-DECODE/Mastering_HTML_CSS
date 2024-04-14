@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  /* Grid Container Properties */
+
+  border: 2px solid red;
+  display: grid;
+  height: 500px;
+  /* gap: 10px; */
+  row-gap: 10px;
+  column-gap: 10px;
+  /* grid-template-columns: 100px 200px 300px; */
+  /* grid-template-columns: 30% 50%; */
+  /* grid-template-columns: 2fr 1fr 1fr 2fr; */
+  /* grid-template-columns: repeat(4,1fr); */
+  /* grid-template-columns: repeat(auto-fill, 100px); */
+  /* grid-template-columns: 200px auto auto; */
+  grid-template-columns: 200px 200px 200px;
+  /* grid-template-rows: 200px 80px; */
+  justify-content: center;
+  /* align-content: center; */
+  align-content: stretch;
+  /* Align-Content Stretch krne se inhein , puri container ki height mil jayegi */
+  /* Align-Content Pure Boxes ko target kr rha tha but Align-Item se wo box ke ander position hoga */
+}
+.box {
+  border: 2px solid green;
+  padding: 12px;
+}
+#box-5 {
+  /* Grid Child Properties */
+  background-color: aqua;
+  /* justify-self: end;
+  align-self: center; */
+  /* Now we want ki Box-1 jo hai wo 2 columns ki jagah le le */
+  /* grid-column: 1/3; */
+  /* start/end */
+  /* grid-column: 1/ span 3; */
+  /* grid-row: 1/ span 2; */
+  /* grid-area is a short hand property for both */
+  grid-area: 1/1/4/3;
+  /* row-start/ column start/ row-end/ column-end */
+}
